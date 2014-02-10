@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>Page Parallax Demo</title>
+        <script type="text/javascript" src="http://requirejs.org/docs/release/2.1.10/minified/require.js" data-main="js/config"></script>
+    	<style type="text/css">
+			body{
+				margin: 0px;
+				padding: 0px;
+			}
+			.box{
+				width: 100%;
+				height: 600px;
+				-webkit-transform : translate3d(0,0,0);
+			}
+
+			.box1{
+				background: url(images/1.jpg);
+				background-size: cover;
+				background-position-y: 100%;
+				background-repeat: no-repeat; 
+			}
+
+			.box2{
+				background: #eeeeee;
+				background: url(images/5.jpg);
+				background-size: cover;
+				background-position-y: 100%;
+				background-repeat: no-repeat; 
+			}
+
+			.box3{
+				background: #dddddd;
+				background: url(images/3.jpg);
+				background-size: cover;
+				background-position-y: 100%;
+				background-repeat: no-repeat; 
+			}
+
+			.box4{
+				background: #cccccc;
+				background: url(images/4.jpg);
+				background-size: cover;
+				background-position-y: 100%;
+				background-repeat: no-repeat; 
+			}
+
+			.box5{
+				background: #bbbbbb;
+				background: url(images/6.jpg);
+				background-size: cover;
+				background-position-y: 100%;
+				background-repeat: no-repeat; 
+			}
+
+			#section-1 .left-box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				float: left;
+				margin: 100px auto auto -100px;
+			}
+
+			#section-1 .right-box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				float: right;
+				margin: 100px -100px auto auto;
+			}
+    	</style>
+    </head>
+    <body>
+        <section id="section-1" class="box box1" data-portion-parallax="[{stone: 0.5, duration:0 , vars: { backgroundPositionY:'100%'}},{stone: 0.5, duration:0.5 , vars: { backgroundPositionY:'0%'}}]">
+        	<!-- <div class="left-box" data-portion-parallax="[{stone: 0.5, duration:0.4 , vars: { x: '+=100' ,y: '+=200'}}]"></div>
+        	<div class="right-box" data-portion-parallax="[{stone: 0.5, duration:0.4 , vars: { x: '-=100' ,y: '+=200'}}]"></div> -->
+        </section>
+        <section id="section-2" class="box box2" data-portion-parallax="[{stone: 0, duration:0 , vars: { backgroundPositionY:'100%'}},{stone: 0.1, duration:.7 , vars: { backgroundPositionY:'0%'}}]">
+        </section>
+        <section id="section-3" class="box box3" data-portion-parallax="[{stone: 0, duration:0 , vars: { backgroundPositionY:'100%'}},{stone: 0.1, duration:.7 , vars: { backgroundPositionY:'0%'}}]">
+        </section>
+        <section id="section-4" class="box box4" data-portion-parallax="[{stone: 0, duration:0 , vars: { backgroundPositionY:'100%'}},{stone: 0.1, duration:.7 , vars: { backgroundPositionY:'0%'}}]">
+        </section>
+        <section id="section-5" class="box box5" data-portion-parallax="[{stone: 0, duration:0 , vars: { backgroundPositionY:'100%'}},{stone: 0.1, duration:0.4, vars: { backgroundPositionY:'0%'}}]">
+        </section>
+    </body>
+</html>
