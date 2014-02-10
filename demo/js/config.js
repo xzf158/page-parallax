@@ -3,7 +3,7 @@ requirejs.config({
 	paths: {
 		"jquery" : 'http://code.jquery.com/jquery-1.10.1.min',
 		"TweenMax": "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min",
-		"smooth_mousewheel": "smooth_mousewheel",
+		"smooth_mousewheel": "../demo/js/smooth_mousewheel",
 		"parallax": "parallax"
 	},
 	shim: {
@@ -16,7 +16,7 @@ require(['jquery', "smooth_mousewheel", "parallax"], function($, SmoothMousewhee
 	$(function (){
 		Parallax.init($("section"));
 		$(window).on("SmoothScroll", function (e){
-			 console.log(e.scrollTop);
+			 // console.log(e.scrollTop);
 			 Parallax.update(e.scrollTop);
 		});
 
