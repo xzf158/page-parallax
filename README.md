@@ -1,6 +1,6 @@
 ###这个lib使用AMD方式加载，基于Jquery,TweenMax开发。
 
-Demo: <http://www.xzfblog.com/demo/smooth-mousewheel/demo/index.html>
+Demo: <http://www.xzfblog.com/demo/page-parallax/demo/index.html>
 
 config 文件：
 
