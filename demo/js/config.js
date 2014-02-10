@@ -15,8 +15,9 @@ requirejs.config({
 require(['jquery', "smooth_mousewheel", "parallax"], function($, SmoothMousewheel, Parallax) {
 	$(function (){
 		Parallax.init($("section"));
+		Parallax.addTo($(".left-box"), "section-1", [{stone: 0.5, duration:0.4 , vars: { x: '+=100' ,y: '+=400'}}]);
+		Parallax.addTo($(".right-box"), "section-1", [{stone: 0.5, duration:0.4 , vars: { x: '-=100' ,y: '+=400'}}]);
 		$(window).on("SmoothScroll", function (e){
-			 // console.log(e.scrollTop);
 			 Parallax.update(e.scrollTop);
 		});
 
